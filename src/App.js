@@ -7,12 +7,12 @@ import React from 'react'
 import './App.css';
 
 const defaultTodos = [
-  { text: 'Work', completed: true },
+  { text: 'Work', completed: false },
   { text: 'Do some cardio', completed: false },
-  { text: 'Super long text to see how the li tag works with long texts. Did I mention that this is a really long text?. If I didnt, i just did', completed: true },
+  { text: 'Super long text to see how the li tag works with long texts. Did I mention that this is a really long text?. If I didnt, i just did', completed: false },
   { text: 'Dinner', completed: false },
   { text: 'Extra task to work with a task-only scrollbar', completed: false },
-  { text: 'Learn React.useState from JuanDC', completed: true },
+  { text: 'Learn React.useState from JuanDC', completed: false },
 ]
 
 function App() {
@@ -23,6 +23,33 @@ function App() {
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
 
+  const searchedTodos = todos.filter(
+    (todo) => {
+      const todoText = todo.text.toLowerCase()
+      const searchText = searchValue.toLocaleLowerCase()
+      
+      return todoText.includes(searchText)
+    }
+  )
+
+  const completeTodo = (text) => {
+    const newTodos = [...todos]
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text
+    )
+    newTodos[todoIndex].completed = true
+    setTodos(newTodos)
+  }
+
+  const deleteTodo = (text) => {
+    const newTodos = [...todos]
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text
+    )
+    newTodos.splice(todoIndex, 1)
+    setTodos(newTodos)
+  }
+
   return (
     <React.Fragment>
       <TodoCounter completed={completedTodos} total={totalTodos}/>
@@ -31,11 +58,13 @@ function App() {
         setSearchValue= {setSearchValue} />
       <div className="item-container">
         <TodoList>
-          {defaultTodos.map(todo => (
+          {searchedTodos.map(todo => (
             <TodoItem 
-            key={todo.text} 
-            text={todo.text}
-            completed={todo.completed} 
+            key = {todo.text} 
+            text = {todo.text}
+            completed = {todo.completed}
+            onComplete = {() => completeTodo(todo.text)}
+            onDelete = {() => deleteTodo(todo.text)}
             />
           ))}
         </TodoList>
