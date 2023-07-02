@@ -1,0 +1,42 @@
+ul {
+    height: 65%;
+    max-height: 65%;
+    overflow: auto;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid #A6B1E1;
+    border-bottom: 2px solid #A6B1E1;
+}
+
+/* Estilos para la barra de desplazamiento */
+ul::-webkit-scrollbar {
+    width: 8px;
+    margin-left: 2px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  ul::-webkit-scrollbar-track {
+    background: transparent; /* Fondo de la pista de la barra de desplazamiento */
+  }
+  
+  ul::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 4px; /* Radio de borde del pulgar de la barra de desplazamiento */
+  }
+  
+  ul::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Color del pulgar de la barra de desplazamiento al pasar el cursor */
+  }
+  
+  /* Estilos para la barra de desplazamiento en Firefox */
+  /* Nota: Firefox utiliza estilos diferentes para la barra de desplazamiento, por lo que se requieren reglas adicionales */
+  /* Asegúrate de incluir los estilos específicos para cada navegador según sea necesario */
+  
+  /* Estilos para la barra de desplazamiento en Firefox */
+  /* Nota: Firefox utiliza estilos diferentes para la barra de desplazamiento, por lo que se requieren reglas adicionales */
+  /* Asegúrate de incluir los estilos específicos para cada navegador según sea necesario */
+  
+  /* Estilos para la barra de desplazamiento en Firefox */
+  /* Nota: Firefox utiliza estilos diferentes para la barra de desplazamiento, por lo que se requieren reglas adicionales */
+  /* Asegúrate de incluir los estilos específicos para cada navegador según sea necesario */
+  

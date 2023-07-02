@@ -1,0 +1,17 @@
+input {
+    background-color: #FFF;
+    width: 90%;
+    height: 35px;
+    font-size: 1.2rem;
+    font-family: 'Audiowide', cursive;
+    padding: 0 5px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+@media (max-width: 500px) {
+    input{
+        height: 30px;
+        font-size: 1rem;
+    }
+} 

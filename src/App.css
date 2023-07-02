@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F4EEFF;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/023/353/689/original/business-people-characters-working-in-the-office-minimal-co-working-space-group-of-working-office-employees-free-png.png');
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: left;
+    font-size: 62.5%;
+    font-family: 'Audiowide', cursive;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    width: 40%;
+    max-width: 550px;
+    height: 90vh;
+    margin-top: 30px;
+    margin-right: 200px;
+    border: 5px solid #A6B1E1;
+    border-radius: 20px;
+    background-color: #DCD6F7;
+    color: #424874
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (max-width: 1400px) {
+    .main {
+        margin-right: 100px;
+    }
 }
 
-.App-header {
-  background-color: #233553;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 930px) {
+    body{
+        justify-content: center;
+        background-position: center;
+    }
+
+    .main {
+        width: 80%;
+        margin-right: 0;
+    }
 }
 
-.App-link {
-  color: #97ca3f;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@media (max-width: 500px) {
+    .main {
+        width: 95%;
+        height: 95vh;
+    }
+} 

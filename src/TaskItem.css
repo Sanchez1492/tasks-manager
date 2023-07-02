@@ -1,0 +1,42 @@
+li {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 14px);
+    height: auto;
+    font-size: 1.2rem;
+    border: 2px solid #A6B1E1;
+    border-radius: 8px;
+    background-color: #F4EEFF;
+    margin-bottom: 10px;
+}
+
+p {
+    width: 80%;
+    padding: 5px;
+}
+
+img {
+    cursor: pointer;
+}
+
+.true, .false{
+    padding-left: 5px;
+}
+
+.true {
+    text-decoration: line-through;
+    background-color: #A6B1E1;
+}
+
+.delete {
+    padding-right: 5px;
+}
+
+@media (max-width: 500px) {
+    li {
+        font-size: 1rem;
+    }
+}

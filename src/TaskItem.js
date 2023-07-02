@@ -1,15 +1,13 @@
-import './TodoItem.css'
 import checkImage from './icons/check-icon.png'
 import minusImage from './icons/minus.png'
 import deleteImage from './icons/delete.png'
+import './TaskItem.css'
 
-function TodoItem (props) {
+function TaskItem (props) {
     return (
       <li
-        className={`${props.completed}`}
-      >
-        <img 
-        onClick={props.onComplete}
+      className={`${props.completed}`}>
+        <img onClick={props.onComplete}
         src={`${props.completed? checkImage : minusImage}`} className="checked"></img>
         <p>{props.text}</p>
         <img
@@ -18,7 +16,7 @@ function TodoItem (props) {
         onClick = {props.onDelete}
         ></img>
       </li>
-    );
+    )
 }
 
-export { TodoItem }
+export { TaskItem }
