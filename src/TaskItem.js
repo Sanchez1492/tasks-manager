@@ -7,7 +7,7 @@ function TaskItem (props) {
     return (
       <li
       className={`${props.completed}`}>
-        <img onClick={props.onComplete}
+        <img onClick={props.onCompleted}
         src={`${props.completed? checkImage : minusImage}`} className="checked"></img>
         <p>{props.text}</p>
         <img

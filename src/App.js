@@ -16,19 +16,47 @@ const defaultTasks = [
 ]
 
 function App() {
+  const [tasks, setTasks] = React.useState(defaultTasks)
+  const [searchValue, setSearchValue] = React.useState('')
+
+  console.log('Los usuarios buscan tareas de ' + searchValue);
+
+  const completedTasks = tasks.filter(task => task.completed).length;
+  const totalTasks = tasks.length;
+
+  const searchedTasks = tasks.filter(
+    (task) =>{
+      const taskText = task.text.toLowerCase()
+      const searchText = searchValue.toLowerCase()
+
+      return taskText.includes(searchText)
+    })
+  
+  const finishTask = (text) => {
+    const newTasks = [...tasks]
+    const taskIndex = newTasks.findIndex((task) => task.text == text)
+
+    newTasks[taskIndex].completed = true
+    setTasks(newTasks)
+  }
+
   return (
     <React.Fragment>
         <div className='bg-img'>
         </div>
-        <TaskCounter total={25} completed={16} />
-        <TaskSearch />
+        <TaskCounter total={totalTasks} completed={completedTasks} />
+        <TaskSearch
+          searchValue= {searchValue}
+          setSearchValue= {setSearchValue}
+        />
 
         <TaskList>
-          {defaultTasks.map(task => (
+          {searchedTasks.map(task => (
             <TaskItem 
             key= {task.text}
             text={task.text}
             completed={task.completed}
+            onComplete={() => finishTask(task.text)}
             />
           ))}
         </TaskList>
