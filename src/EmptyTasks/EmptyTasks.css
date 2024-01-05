@@ -1,0 +1,26 @@
+.empty-tasks {
+    margin: auto;
+    width: 90%;
+    margin-top: 4rem;
+}
+
+.empty-tasks--container {
+    width: 50%;
+    margin: auto;
+}
+
+.empty-tasks--img {
+    width: 100%;
+}
+
+.empty-tasks--text {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .empty-tasks--container {
+        width: 65%;
+    }
+}

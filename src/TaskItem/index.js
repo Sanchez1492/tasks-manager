@@ -1,6 +1,6 @@
-import checkImage from './icons/check-icon.png'
-import minusImage from './icons/minus.png'
-import deleteImage from './icons/delete.png'
+import checkImage from '../icons/check-icon.png'
+import minusImage from '../icons/minus.png'
+import deleteImage from '../icons/delete.png'
 import './TaskItem.css'
 
 function TaskItem (props) {

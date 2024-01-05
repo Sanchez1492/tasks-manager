@@ -1,0 +1,26 @@
+.tasks-error {
+    margin: auto;
+    width: 90%;
+    margin-top: 4rem;
+}
+
+.tasks-error--container {
+    width: 40%;
+    margin: auto;
+}
+
+.tasks-error--img {
+    width: 100%;
+}
+
+.tasks-error--text {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .empty-tasks--container {
+        width: 65%;
+    }
+}

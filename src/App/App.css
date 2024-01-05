@@ -19,7 +19,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
     width: 40%;
     max-width: 550px;
     height: 90vh;
@@ -28,7 +27,8 @@ body {
     border: 5px solid #A6B1E1;
     border-radius: 20px;
     background-color: #DCD6F7;
-    color: #424874
+    color: #424874;
+    overflow: hidden;
 }
 
 @media (max-width: 1400px) {
