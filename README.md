@@ -1,6 +1,6 @@
-# To-Do List Web App
+# Tasks Manager Web App
 
-# Welcome to the To-Do List Web App repository! 📝✨
+# Welcome to the Tasks Manager Web App repository! 📝✨
 
 # Overview
 This web app is your go-to tool for staying organized and on top of your tasks. Whether you're a busy professional, a student, or anyone with a lot on their plate, this task manager app is designed to streamline your day.
