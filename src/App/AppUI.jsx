@@ -4,9 +4,11 @@ import { TaskCounter } from '../TaskCounter';
 import { TaskSearch } from '../TaskSearch';
 import { TaskList } from '../TaskList';
 import { CreateTaskButton } from '../CreateTaskButton';
+import { TaskForm } from '../TaskForm'
 import { TasksLoading } from '../TasksLoading';
 import { TasksError } from '../TasksError';
 import { EmptyTasks } from '../EmptyTasks';
+import { Modal } from '../Modal';
 import { TaskContext } from '../TaskContext';
 
 
@@ -17,10 +19,12 @@ function AppUI () {
         searchedTasks,
         finishTask,
         deleteTask,
+        openModal,
+        setOpenModal,
     } = React.useContext(TaskContext)
 
     return (
-        <React.Fragment>
+        <>
             <div className='bg-img'>
             </div>
             <TaskCounter />
@@ -39,8 +43,16 @@ function AppUI () {
                             />
                         ))}
                 </TaskList>
-            <CreateTaskButton />
-        </React.Fragment>
+            <CreateTaskButton
+                setOpenModal = { setOpenModal }
+            />
+            
+            {openModal && (
+                <Modal>
+                    <TaskForm />
+                </Modal>
+            )}
+        </>
       )
 }
 

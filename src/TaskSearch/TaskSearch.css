@@ -1,6 +1,6 @@
 input {
     background-color: #FFF;
-    width: 90%;
+    width: 70%;
     height: 35px;
     font-size: 1.2rem;
     font-family: 'Audiowide', cursive;
@@ -8,6 +8,10 @@ input {
     border: 2px solid black;
     border-radius: 7px;
     margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none 
 }
 
 @media (max-width: 500px) {
